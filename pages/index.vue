@@ -169,13 +169,22 @@
       filteredProducts(){
         let start = (this.currentPage - 1) * this.pageSize;
         let end = start + this.pageSize;
-        this.productsShowList = this.filteredProducts.slice(start, end);
+        if(this.filteredProducts.length > 5)
+        {this.productsShowList = this.filteredProducts.slice(start, end);}
+        else{
+          this.productsShowList = this.filteredProducts;
+        }
+
       },
 
       currentPage(){
         let start = (this.currentPage - 1) * this.pageSize;
         let end = start + this.pageSize;
-        this.productsShowList = this.filteredProducts.slice(start, end);
+        if(this.filteredProducts.length > 5)
+        {this.productsShowList = this.filteredProducts.slice(start, end);}
+        else{
+          this.productsShowList = this.filteredProducts;
+        }
       }
     }
   }
