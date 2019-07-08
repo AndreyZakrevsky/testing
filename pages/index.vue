@@ -95,6 +95,7 @@
         this.searchPrice  = '';
         this.searchName  = '';
         this.filteredProducts = this.products;
+        this.currentPage = 1;
       },
 
       filterByName(el){
